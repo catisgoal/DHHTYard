@@ -10,18 +10,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.outlined.BookmarkAdd
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -32,7 +30,7 @@ data class TrackDTO(
     val trackArtists: List<String>,
     val trackSpotifyURL: String,
     val trackYTURL: String,
-    val onMoreClick: () -> Unit = {},
+    val onCopyClick: () -> Unit = {},
     val onTrackClick: () -> Unit = {},
     val onBookmarkClick: () -> Unit = {},
     val isBookmarked: Boolean = false
@@ -80,21 +78,19 @@ fun Track(
         Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterEnd) {
             Row {
                 Icon(
-                    imageVector = if (trackDTO.isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkAdd,
-                    contentDescription = "", modifier = Modifier
-                        .clip(CircleShape)
+                    imageVector = Icons.Default.ContentCopy,
+                    contentDescription = "jatin in da houz",
+                    modifier = Modifier
                         .clickable {
-                            trackDTO.onBookmarkClick()
+                            trackDTO.onCopyClick()
                         }
                 )
                 Spacer(modifier = Modifier.width(10.dp))
                 Icon(
-                    imageVector = Icons.Default.MoreVert,
-                    contentDescription = "jatin in da houz",
-                    modifier = Modifier
-                        .clip(CircleShape)
+                    imageVector = if (trackDTO.isBookmarked) Icons.Filled.Bookmark else Icons.Outlined.BookmarkAdd,
+                    contentDescription = "", modifier = Modifier
                         .clickable {
-                            trackDTO.onMoreClick()
+                            trackDTO.onBookmarkClick()
                         }
                 )
             }

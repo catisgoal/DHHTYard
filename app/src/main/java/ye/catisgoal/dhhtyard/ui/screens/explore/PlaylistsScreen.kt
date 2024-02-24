@@ -1,7 +1,10 @@
 package ye.catisgoal.dhhtyard.ui.screens.explore
 
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -10,8 +13,12 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.BookmarkAdd
+import androidx.compose.material.icons.outlined.ContentCopy
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -69,19 +76,6 @@ fun PlaylistsScreen() {
                             textAlign = TextAlign.Start,
                             overflow = TextOverflow.Ellipsis
                         )
-                        Text(
-                            text = it.trackArtists[0],
-                            style = MaterialTheme.typography.titleSmall,
-                            fontSize = 16.sp,
-                            modifier = Modifier
-                                .fillMaxWidth(0.6f)
-                                .padding(end = 15.dp)
-                                .align(Alignment.BottomStart),
-                            maxLines = 1,
-                            lineHeight = 20.sp,
-                            textAlign = TextAlign.Start,
-                            overflow = TextOverflow.Ellipsis
-                        )
                         AsyncImage(
                             model = it.trackCoverArtURL,
                             modifier = Modifier
@@ -89,6 +83,42 @@ fun PlaylistsScreen() {
                                 .clip(RoundedCornerShape(15.dp))
                                 .align(Alignment.TopEnd), contentDescription = null
                         )
+                    }
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wrapContentHeight()
+                            .padding(top = 20.dp, end = 15.dp, start = 15.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = it.trackArtists[0],
+                            style = MaterialTheme.typography.titleSmall,
+                            fontSize = 16.sp,
+                            modifier = Modifier
+                                .fillMaxWidth(0.5f)
+                                .padding(end = 15.dp),
+                            maxLines = 1,
+                            lineHeight = 20.sp,
+                            textAlign = TextAlign.Start,
+                            overflow = TextOverflow.Ellipsis
+                        )
+
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(15.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(imageVector = Icons.Outlined.ContentCopy,
+                                contentDescription = null,
+                                modifier = Modifier.clickable {
+
+                                })
+                            Icon(
+                                imageVector = Icons.Outlined.BookmarkAdd,
+                                contentDescription = null,
+                                modifier = Modifier.clickable { })
+                        }
                     }
                     Divider(
                         modifier = Modifier.padding(start = 10.dp, end = 10.dp, top = 10.dp),
