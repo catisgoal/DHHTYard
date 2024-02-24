@@ -11,8 +11,11 @@ enum class MainBtmNavigationRoutes {
 enum class ExploreNavigationRoutes {
     NEW_RELEASES,
     DISCOVER_ARTISTS,
-    DISCOVER_TRACKS,
     LIBRARY,
     DISCOVER_PLAYLISTS,
     DISCOVER_DHHT_ACCOUNTS
+}
+
+enum class ExploreScreenType {
+    EPS, LPS, ALBUMS, TRACKS, MIXTAPES
 }

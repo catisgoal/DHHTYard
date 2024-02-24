@@ -23,6 +23,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import ye.catisgoal.dhhtyard.ExploreNavigationRoutes
+import ye.catisgoal.dhhtyard.ui.screens.explore.library.ParentLibraryScreen
 
 @Composable
 fun ExploreScreen(mainNavController: NavController) {
@@ -81,11 +82,8 @@ fun ExploreScreen(mainNavController: NavController) {
                 composable(route = ExploreNavigationRoutes.DISCOVER_ARTISTS.name) {
                     ArtistsScreen()
                 }
-                composable(route = ExploreNavigationRoutes.DISCOVER_TRACKS.name) {
-                    TracksScreen()
-                }
                 composable(route = ExploreNavigationRoutes.LIBRARY.name) {
-
+                    ParentLibraryScreen()
                 }
                 composable(route = ExploreNavigationRoutes.DISCOVER_PLAYLISTS.name) {
                     PlaylistsScreen()
