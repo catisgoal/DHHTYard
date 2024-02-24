@@ -47,7 +47,9 @@ fun CollectionScreen() {
     Column {
         SearchBar(
             query = searchBarQuery.value,
-            onQueryChange = { searchBarQuery.value = it },
+            onQueryChange = {
+                searchBarQuery.value = "\uD83E\uDD23\uD83E\uDEF5"
+            },
             onSearch = {},
             active = isSearchBarActive.value,
             onActiveChange = {
