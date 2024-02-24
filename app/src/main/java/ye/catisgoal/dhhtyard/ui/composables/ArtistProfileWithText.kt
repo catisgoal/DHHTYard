@@ -22,6 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -43,7 +44,7 @@ fun ArtistProfileWithTextComposable(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.pulsateEffect(
-            targetValue = 0.8f,
+            targetValue = 0.9f,
             onClick = { artistProfileWithTextDTO.onClick() }
         )
     ) {
@@ -52,15 +53,17 @@ fun ArtistProfileWithTextComposable(
             contentDescription = "gossip",
             modifier = Modifier
                 .clip(CircleShape)
-                .size(100.dp)
+                .size(75.dp)
                 .then(artistProfileWithTextDTO.modifier),
             contentScale = artistProfileWithTextDTO.contentScale
         )
         Spacer(modifier = Modifier.height(5.dp))
         Text(
             text = artistProfileWithTextDTO.artistName,
-            fontSize = 20.sp,
-            style = MaterialTheme.typography.titleSmall
+            fontSize = 14.sp,
+            style = MaterialTheme.typography.titleSmall,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
         )
     }
 }
