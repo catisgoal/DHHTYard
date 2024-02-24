@@ -31,6 +31,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import coil.compose.AsyncImage
@@ -153,7 +154,7 @@ class ExploreScreenVM : ViewModel() {
                             .padding(top = 10.dp),
                         verticalArrangement = Arrangement.spacedBy(15.dp)
                     ) {
-                        items(sampleData) {
+                        items(sampleData + sampleData) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
                                 modifier = Modifier
@@ -167,7 +168,8 @@ class ExploreScreenVM : ViewModel() {
                                         .clip(
                                             CircleShape
                                         )
-                                        .size(75.dp)
+                                        .size(75.dp),
+                                    contentScale = ContentScale.Crop
                                 )
                                 Spacer(modifier = Modifier.width(10.dp))
                                 Text(

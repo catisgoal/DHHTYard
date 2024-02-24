@@ -23,61 +23,54 @@ import ye.catisgoal.dhhtyard.ui.theme.DHHTYardTheme
 
 val sampleData = listOf(
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1754170790831071232/WGAmDiUF_400x400.jpg",
-        trackName = "sexa aloo",
-        trackArtists = listOf("@hiayusharma"),
+        trackCoverArtURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg/640px-Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
+        trackName = "Kanye West",
+        trackArtists = listOf("@kanyewest"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1547540778800775169/DklEzzGd_400x400.jpg",
-        trackName = "headphone",
-        trackArtists = listOf("@imaheadphone, @mujhekyamaitoheadphonehu"),
+        trackCoverArtURL = "https://www.investopedia.com/thmb/t9ptoLnvjFl1qlVWhXIrnL17LGA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1205198865-48d9cf94a766422796067c893ef272e8.jpg",
+        trackName = "Ye",
+        trackArtists = listOf("@kanyewest, @ye"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1740074467244773376/cv9P1L7c_400x400.jpg",
-        trackName = "Tusha P \uD83D\uDDFF",
-        trackArtists = listOf("@pushh_shh, @jcole_alt"),
+        trackCoverArtURL = "https://media.newyorker.com/photos/5909741d2179605b11ad8004/master/pass/Trammell-Kanye-West-Madison-Square-Garden.jpg",
+        trackName = "Mr. West",
+        trackArtists = listOf("@yzy, @ye"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1730884039962435584/2xnEc-5l_400x400.jpg",
-        trackName = "Robinsonthegoat",
-        trackArtists = listOf("@robinsonthygoat, @robinsonthygoat"),
+        trackCoverArtURL = "https://imgix.bustle.com/wmag/2016/09/06/57cf1630449b3b0baf16dcb4_1316.w.MS_.royals.image3_.jpg?w=414&h=499&fit=crop&crop=faces&auto=format%2Ccompress",
+        trackName = "G.O.A.T",
+        trackArtists = listOf("@kanyewest, @yeezy"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1749759141697228800/dApPKcvV_400x400.jpg",
-        trackName = "ND STAR",
-        trackArtists = listOf("@BabyIamNdStar, Good Vibes OUT NOW!!!"),
+        trackCoverArtURL = "https://i.pinimg.com/1200x/87/43/a1/8743a10b2b1958f8541af429ecf7e03e.jpg",
+        trackName = "GROWN ASS SUPERHERO",
+        trackArtists = listOf("VULTURES OUT NOW!!!"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1761112630134222853/qeEgFh5A_400x400.jpg",
-        trackName = "Katadah",
-        trackArtists = listOf("@KTADA_X, @therealrapdemon_alt"),
+        trackCoverArtURL = "https://i.pinimg.com/474x/ac/39/08/ac3908c876870f5cc899c277218b7838.jpg",
+        trackName = "HUH",
+        trackArtists = listOf("@kanyewest, @yeezy"),
         trackSpotifyURL = "",
         trackYTURL = ""
     ),
     TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1747014617728172032/Sm-KYtY6_400x400.jpg",
-        trackName = "Rachit",
-        trackArtists = listOf("@imrachitalt, @imrachitp"),
+        trackCoverArtURL = "https://i.pinimg.com/736x/40/0b/25/400b25fae2bd5df08405140e2c115ec9.jpg",
+        trackName = "YZYZYZYZY",
+        trackArtists = listOf("@kanyewest, @yeezy"),
         trackSpotifyURL = "",
         trackYTURL = ""
-    ),
-    TrackDTO(
-        trackCoverArtURL = "https://pbs.twimg.com/profile_images/1733900112441823232/Ynv9PwUH_400x400.jpg",
-        trackName = "DRW",
-        trackArtists = listOf("@ankan_alt"),
-        trackSpotifyURL = "",
-        trackYTURL = ""
-    ),
+    )
 )
 
 class MainActivity : ComponentActivity() {

@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -51,7 +52,8 @@ fun Project(
             contentDescription = "",
             modifier = Modifier
                 .size(size.value)
-                .clip(RoundedCornerShape(15.dp))
+                .clip(RoundedCornerShape(15.dp)),
+            contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.height(5.dp))
         Row(

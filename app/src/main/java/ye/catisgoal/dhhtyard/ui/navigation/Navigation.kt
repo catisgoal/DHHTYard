@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import ye.catisgoal.dhhtyard.MainBtmNavigationRoutes
 import ye.catisgoal.dhhtyard.ui.screens.collection.CollectionScreen
 import ye.catisgoal.dhhtyard.ui.screens.explore.ExploreScreen
+import ye.catisgoal.dhhtyard.ui.screens.settings.SettingsScreen
 
 @Composable
 fun MainNavigation(navController: NavHostController) {
@@ -19,10 +20,10 @@ fun MainNavigation(navController: NavHostController) {
             ExploreScreen(mainNavController = navController)
         }
         composable(route = MainBtmNavigationRoutes.SETTINGS.name) {
+            SettingsScreen()
         }
         composable(route = MainBtmNavigationRoutes.COLLECTION.name) {
             CollectionScreen()
-
         }
     }
 
