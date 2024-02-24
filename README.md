@@ -1,0 +1,9 @@
+- Download from [here](https://github.com/catisgoal/DHHTYard/releases/download/te/DHHT-0.0.1.apk)
+- why this exists? why not.
+- purpose of this? nothing.
+- built with? kotlin + jetpack compose.
+- data gets updated? maybe.
+- who should use this? idk.
+- can i contribute? YES, make a pull request.
+- has a server? yes.
+- API key?? jnl
