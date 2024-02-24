@@ -5,14 +5,14 @@ enum class ComposableOnClickState {
 }
 
 enum class MainBtmNavigationRoutes {
-    EXPLORE, SETTINGS, LIBRARY
+    EXPLORE, SETTINGS, COLLECTION
 }
 
 enum class ExploreNavigationRoutes {
     NEW_RELEASES,
     DISCOVER_ARTISTS,
     DISCOVER_TRACKS,
-    DISCOVER_ALBUMS,
+    LIBRARY,
     DISCOVER_PLAYLISTS,
     DISCOVER_DHHT_ACCOUNTS
 }

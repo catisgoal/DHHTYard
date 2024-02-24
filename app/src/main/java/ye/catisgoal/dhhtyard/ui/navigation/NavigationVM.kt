@@ -3,10 +3,10 @@ package ye.catisgoal.dhhtyard.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Explore
-import androidx.compose.material.icons.filled.LibraryMusic
+import androidx.compose.material.icons.filled.QueueMusic
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.outlined.Explore
-import androidx.compose.material.icons.outlined.LibraryMusic
+import androidx.compose.material.icons.outlined.QueueMusic
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -32,10 +32,10 @@ class NavigationVM : ViewModel() {
             navigationRoute = MainBtmNavigationRoutes.EXPLORE
         ),
         NavigationItemDTO(
-            itemName = "Library",
-            selectedIcon = Icons.Filled.LibraryMusic,
-            nonSelectedIcon = Icons.Outlined.LibraryMusic,
-            navigationRoute = MainBtmNavigationRoutes.LIBRARY
+            itemName = "Collection",
+            selectedIcon = Icons.Filled.QueueMusic,
+            nonSelectedIcon = Icons.Outlined.QueueMusic,
+            navigationRoute = MainBtmNavigationRoutes.COLLECTION
         ),
         NavigationItemDTO(
             itemName = "Settings",

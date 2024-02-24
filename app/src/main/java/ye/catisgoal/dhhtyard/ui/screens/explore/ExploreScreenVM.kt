@@ -1,15 +1,15 @@
 package ye.catisgoal.dhhtyard.ui.screens.explore
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Album
 import androidx.compose.material.icons.filled.Audiotrack
 import androidx.compose.material.icons.filled.FiberNew
+import androidx.compose.material.icons.filled.LibraryMusic
 import androidx.compose.material.icons.filled.People
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlaylistAdd
-import androidx.compose.material.icons.outlined.Album
 import androidx.compose.material.icons.outlined.Audiotrack
 import androidx.compose.material.icons.outlined.FiberNew
+import androidx.compose.material.icons.outlined.LibraryMusic
 import androidx.compose.material.icons.outlined.People
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.PlaylistAdd
@@ -38,10 +38,10 @@ class ExploreScreenVM : ViewModel() {
             itemName = "Tracks"
         ),
         NavigationItemDTO(
-            selectedIcon = Icons.Filled.Album,
-            nonSelectedIcon = Icons.Outlined.Album,
-            navigationRoute = ExploreNavigationRoutes.DISCOVER_ALBUMS,
-            itemName = "Albums"
+            selectedIcon = Icons.Filled.LibraryMusic,
+            nonSelectedIcon = Icons.Outlined.LibraryMusic,
+            navigationRoute = ExploreNavigationRoutes.LIBRARY,
+            itemName = "Library"
         ),
         NavigationItemDTO(
             selectedIcon = Icons.Filled.PlaylistAdd,

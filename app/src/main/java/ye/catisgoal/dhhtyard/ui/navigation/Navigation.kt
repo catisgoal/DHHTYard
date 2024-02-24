@@ -15,12 +15,12 @@ fun MainNavigation(navController: NavHostController) {
         startDestination = NavigationVM.startDestination.value
     ) {
         composable(route = MainBtmNavigationRoutes.EXPLORE.name) {
-            ExploreScreen(navController = navController)
+            ExploreScreen(mainNavController = navController)
         }
         composable(route = MainBtmNavigationRoutes.SETTINGS.name) {
 
         }
-        composable(route = MainBtmNavigationRoutes.LIBRARY.name) {
+        composable(route = MainBtmNavigationRoutes.COLLECTION.name) {
 
         }
     }
