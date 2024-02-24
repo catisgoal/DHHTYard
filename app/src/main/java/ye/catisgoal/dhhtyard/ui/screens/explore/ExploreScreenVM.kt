@@ -3,13 +3,13 @@ package ye.catisgoal.dhhtyard.ui.screens.explore
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Album
 import androidx.compose.material.icons.filled.Audiotrack
-import androidx.compose.material.icons.filled.MusicNote
+import androidx.compose.material.icons.filled.FiberNew
 import androidx.compose.material.icons.filled.People
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlaylistAdd
 import androidx.compose.material.icons.outlined.Album
 import androidx.compose.material.icons.outlined.Audiotrack
-import androidx.compose.material.icons.outlined.MusicNote
+import androidx.compose.material.icons.outlined.FiberNew
 import androidx.compose.material.icons.outlined.People
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.PlaylistAdd
@@ -20,10 +20,10 @@ import ye.catisgoal.dhhtyard.ui.navigation.NavigationItemDTO
 class ExploreScreenVM : ViewModel() {
     val railNavigationList = listOf(
         NavigationItemDTO(
-            selectedIcon = Icons.Filled.MusicNote,
-            nonSelectedIcon = Icons.Outlined.MusicNote,
+            selectedIcon = Icons.Filled.FiberNew,
+            nonSelectedIcon = Icons.Outlined.FiberNew,
             navigationRoute = ExploreNavigationRoutes.NEW_RELEASES,
-            itemName = "New releases"
+            itemName = "Releases"
         ),
         NavigationItemDTO(
             selectedIcon = Icons.Filled.Person,
@@ -52,7 +52,7 @@ class ExploreScreenVM : ViewModel() {
         NavigationItemDTO(
             selectedIcon = Icons.Filled.People,
             nonSelectedIcon = Icons.Outlined.People,
-            navigationRoute = ExploreNavigationRoutes.NEW_RELEASES,
+            navigationRoute = ExploreNavigationRoutes.DISCOVER_DHHT_ACCOUNTS,
             itemName = "DHHT"
         ),
     )
