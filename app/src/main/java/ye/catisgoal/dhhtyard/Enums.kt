@@ -19,3 +19,7 @@ enum class ExploreNavigationRoutes {
 enum class ExploreScreenType {
     EPS, LPS, ALBUMS, TRACKS, MIXTAPES
 }
+
+enum class DHHTScreenType {
+    MUSIC, ACCOUNTS
+}
