@@ -10,11 +10,13 @@ import ye.catisgoal.dhhtyard.R
 val fonts = FontFamily(
     Font(R.font.semibold, weight = FontWeight.SemiBold),
     Font(R.font.bold, weight = FontWeight.Bold),
-    Font(R.font.regular, weight = FontWeight.Normal)
+    Font(R.font.regular, weight = FontWeight.Normal),
+    Font(R.font.light, weight = FontWeight.Light)
 )
 
 val Typography = Typography(
     titleLarge = TextStyle(fontFamily = fonts, fontWeight = FontWeight.Bold),
     titleMedium = TextStyle(fontFamily = fonts, fontWeight = FontWeight.SemiBold),
-    titleSmall = TextStyle(fontFamily = fonts, fontWeight = FontWeight.Normal)
+    titleSmall = TextStyle(fontFamily = fonts, fontWeight = FontWeight.Normal),
+    bodySmall = TextStyle(fontFamily = fonts, fontWeight = FontWeight.Light),
 )

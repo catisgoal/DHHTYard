@@ -11,15 +11,13 @@ import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.lifecycle.ViewModel
+import ye.catisgoal.dhhtyard.MainBtmNavigationRoutes
 
-enum class NavigationRoutes {
-    EXPLORE, SETTINGS, LIBRARY
-}
 
-data class BtmNavigationItem(
+data class NavigationItemDTO(
     val selectedIcon: ImageVector,
     val nonSelectedIcon: ImageVector,
-    val navigationRoute: NavigationRoutes,
+    val navigationRoute: Enum<*>,
     val itemName: String,
 )
 
@@ -27,29 +25,29 @@ class NavigationVM : ViewModel() {
 
 
     val btmBarList = listOf(
-        BtmNavigationItem(
+        NavigationItemDTO(
             itemName = "Explore",
             selectedIcon = Icons.Filled.Explore,
             nonSelectedIcon = Icons.Outlined.Explore,
-            navigationRoute = NavigationRoutes.EXPLORE
+            navigationRoute = MainBtmNavigationRoutes.EXPLORE
         ),
-        BtmNavigationItem(
+        NavigationItemDTO(
             itemName = "Library",
             selectedIcon = Icons.Filled.LibraryMusic,
             nonSelectedIcon = Icons.Outlined.LibraryMusic,
-            navigationRoute = NavigationRoutes.LIBRARY
+            navigationRoute = MainBtmNavigationRoutes.LIBRARY
         ),
-        BtmNavigationItem(
+        NavigationItemDTO(
             itemName = "Settings",
             selectedIcon = Icons.Filled.Settings,
             nonSelectedIcon = Icons.Outlined.Settings,
-            navigationRoute = NavigationRoutes.SETTINGS
+            navigationRoute = MainBtmNavigationRoutes.SETTINGS
         ),
     )
 
     companion object {
         val startDestination =
-            mutableStateOf(NavigationRoutes.EXPLORE.name)
+            mutableStateOf(MainBtmNavigationRoutes.EXPLORE.name)
     }
 
 }

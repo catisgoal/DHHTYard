@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import ye.catisgoal.dhhtyard.ui.screens.HomeScreen
+import ye.catisgoal.dhhtyard.MainBtmNavigationRoutes
+import ye.catisgoal.dhhtyard.ui.screens.explore.ExploreScreen
 
 @Composable
 fun MainNavigation(navController: NavHostController) {
@@ -13,14 +14,14 @@ fun MainNavigation(navController: NavHostController) {
         navController = navController,
         startDestination = NavigationVM.startDestination.value
     ) {
-        composable(route = NavigationRoutes.EXPLORE.name) {
-            HomeScreen(navController = navController)
+        composable(route = MainBtmNavigationRoutes.EXPLORE.name) {
+            ExploreScreen(navController = navController)
         }
-        composable(route = NavigationRoutes.SETTINGS.name) {
-            HomeScreen(navController = navController)
+        composable(route = MainBtmNavigationRoutes.SETTINGS.name) {
+
         }
-        composable(route = NavigationRoutes.LIBRARY.name) {
-            HomeScreen(navController = navController)
+        composable(route = MainBtmNavigationRoutes.LIBRARY.name) {
+
         }
     }
 
