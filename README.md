@@ -6,4 +6,5 @@
 - who should use this? idk.
 - can i contribute? YES, make a pull request.
 - has a server? yes.
+- does it work? no.
 - API key?? jnl
